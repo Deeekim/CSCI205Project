@@ -2,7 +2,11 @@ import java.awt.*;
 import java.awt.geom.*;
 import java.util.Random;
 
-/** 
+/**
+* Michael Deekimcheng and Miguel Yapan
+* 205641 and 205501
+* Date Created: October 11, 2024
+*
 * This code creates a Player class that extends the Entity class with the capacity to
 * take key inputs. The user will be controlling the movement of the player across the
 * world map. 
@@ -19,7 +23,7 @@ public class Player extends Entity {
     private int score = 0;
 
     /**
-    * Constructs a Player with specified SceneCanvas and KeyHandle
+    * Constructs a Player with specified SceneCanvas and KeyHandle.
     *
     * @param gc the SceneCanvas that provides the player's world and screen coordinates
     * @param keyH the KeyHandle that manages key inputs for the player's movement
@@ -61,7 +65,9 @@ public class Player extends Entity {
         if(keyH.getUpPressed() == true || keyH.getDownPressed() == true || 
         keyH.getLeftPressed() == true || keyH.getRightPressed() == true) {
             
-            // Set direction of the play depending on the keys pressed
+            /*
+            * Set direction of the play depending on the keys pressed
+            */ 
             if (keyH.getUpPressed()) {
                 if (keyH.getRightPressed()) {
                     this.setDirection("NE");
@@ -94,7 +100,7 @@ public class Player extends Entity {
             int objIndex = sc.getCChecker().checkObject(this, true);
             pickUpObject(objIndex);
 
-            /**
+            /*
             * Runs the player is not colliding with any object or tile. Updates
             * worldX and worldY depending on the direction of the player.
             */
@@ -122,7 +128,7 @@ public class Player extends Entity {
     */
     public void pickUpObject(int i) {
 
-        // Arbitrary number beyond length of object list
+        // 999 can be replace with any arbitrary number beyond the length of object list
         if(i != 999) {
 
             String objectName = sc.getObj()[i].getName();
@@ -130,15 +136,16 @@ public class Player extends Entity {
             switch(objectName) {
             case "Dot":
 
-                /**
+                /*
                 * Updates the player's score and removes object 'Dot' on collision with player
                 */
                 score++;
                 sc.getObj()[i] = null;
                 int tileNum, screenTileX, screenTileY = 0;
 
-                /**
-                * Randomly places new 'Dot' on tile whose collision is false
+                /*
+                * Randomly places new 'Dot' on tile whose collision is false. The terminal prints out
+                * the tile row and tile size where the new 'Dot' is created.
                 */
                 do {
                     screenTileX = rand.nextInt(50);
@@ -185,7 +192,7 @@ public class Player extends Entity {
     /**
     * Return's the player's current score
     *
-    * @return the player's score`
+    * @return the player's score
     */
     public int getScore() {
         return score;
