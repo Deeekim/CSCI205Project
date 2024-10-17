@@ -1,26 +1,30 @@
 /**
- * The class is responsible for initializing and setting 
- * various objects on the frame. In this project, it places 
- * `Dot` objects on the game scene at specified tiles.
- */
+* Michael Deekimcheng and Miguel Yapan
+* 205641 and 205501
+* Date created: October 12, 2024
+*
+* The class is responsible for initializing and setting 
+* various objects on the frame. In this project, it places 
+* `Dot` objects on the game scene at specified tiles.
+*/
 public class AssetSetter {
     
-    /** The object used for drawing the tiles, objects, and entities */
     private SceneCanvas gc;
 
     /**
-     * Constructs an {@code AssetSetter} with the specified {@code SceneCanvas}.
-     * 
-     * @param gc the {@code SceneCanvas} instance that this {@code AssetSetter} will manage
-     */
+    * Constructs an AssetSetter with the specified SceneCanvas.
+    * 
+    * @param gc the SceneCanvas instance that this AssetSetter will manage
+    */
     public AssetSetter(SceneCanvas gc) {
         this.gc = gc;
     }
 
     /**
      * Sets the objects on the scene by placing `Dot` objects at predefined 
-     * positions. These initial positions are calculated by multiplying the tile size  
-     * to a coder-identified column and row indices.
+     * positions. These initial positions are identified by multiplying the tile size  
+     * to any column and row indices. The dots must be placed on a non-collision tile.
+     * Otherwise, there is no way for the player to access the object in game.
      */
     public void setObject() {
         // Add more dots here depending on size of obj list
