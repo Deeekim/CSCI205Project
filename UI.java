@@ -1,12 +1,21 @@
 import java.awt.*;
 import java.awt.geom.*;
 
+/**
+* The class is responsible for printing the current player's score and 
+* the tile's column and row which the player would be on.
+*/
 public class UI {
     
     private SceneCanvas gc;
     private Font defaultFont;
     private Color BROWN;
-    
+
+    /**
+    * Constructs a UI with the specified SceneCanvas
+    *
+    * @param gc where the UI will be drawn on
+    */
     public UI(SceneCanvas gc) {
 
         this.gc = gc;
@@ -15,11 +24,16 @@ public class UI {
 
     }
 
+    /**
+    * Draws the player's score and coordinates on screen
+    *
+    * @param g2d the Graphics2D utilised for drawing the objects
+    */ 
     public void draw(Graphics2D g2d) {
 
         g2d.setFont(defaultFont);
 
-        // Draw UI DOT
+        // draw a visual representation of dot so the player knows what object is being kept track of
         Ellipse2D.Double d1 = new Ellipse2D.Double(24, 24, 36, 36);
         g2d.setColor(Color.ORANGE);
         g2d.fill(d1);
@@ -30,9 +44,11 @@ public class UI {
         g2d.setColor(Color.WHITE);
         g2d.fill(d3);
 
-        // Draw UI Counter
         g2d.setColor(BROWN);
+        // displays the player's score
         g2d.drawString("x " + gc.getPlayer().getScore(), 69, 56);
+
+        // displays player's current Tile's column and row
         g2d.drawString("x:"+ gc.getPlayer().getWorldX()/gc.getTileSize()+" y:" + gc.getPlayer().getWorldY()/gc.getTileSize(),620,56);
 
     }
