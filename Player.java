@@ -2,6 +2,11 @@ import java.awt.*;
 import java.awt.geom.*;
 import java.util.Random;
 
+/** 
+* This code creates a Player class that extends the Entity class with the capacity to
+* take key inputs. The user will be controlling the movement of the player across the
+* world map. 
+*/
 public class Player extends Entity {
 
     private SceneCanvas sc;
@@ -12,7 +17,13 @@ public class Player extends Entity {
     private final int screenX;
     private final int screenY;
     private int score = 0;
-    
+
+    /**
+    * Constructs a Player with specified SceneCanvas and KeyHandle
+    *
+    * @param gc the SceneCanvas that provides the player's world and screen coordinates
+    * @param keyH the KeyHandle that manages key inputs for the player's movement
+    */
     public Player(SceneCanvas sc, KeyHandle keyH) {
         this.sc = sc;
         this.keyH = keyH;
@@ -27,7 +38,12 @@ public class Player extends Entity {
         setDefaultValues();
 
     }
-
+    
+    /**
+    * Instantiates default values for the player's default worldX and worldY values,
+    * default speed and default direction. WorldX and WorldY determines where the player
+    * is first drawn during game creation.
+    */
     public void setDefaultValues() {
         this.setWorldX(sc.getTileSize() * 27);
         this.setWorldY(sc.getTileSize() * 23);
@@ -35,11 +51,17 @@ public class Player extends Entity {
         this.setDirection("S");
     }
 
+    /**
+    * Updates next state of the player upon, including direction of the player's movement, collision between the player
+    * and a tile, and collision between the player and an object. The code can also alter the player's 
+    * capacity to move depending on its direction and tiles/object in said direction.
+    */
     public void update() {
-
+        
         if(keyH.getUpPressed() == true || keyH.getDownPressed() == true || 
         keyH.getLeftPressed() == true || keyH.getRightPressed() == true) {
-
+            
+            // Set direction of the play depending on the keys pressed
             if (keyH.getUpPressed()) {
                 if (keyH.getRightPressed()) {
                     this.setDirection("NE");
@@ -72,7 +94,10 @@ public class Player extends Entity {
             int objIndex = sc.getCChecker().checkObject(this, true);
             pickUpObject(objIndex);
 
-            // If Collision is False, player can move
+            /**
+            * Runs the player is not colliding with any object or tile. Updates
+            * worldX and worldY depending on the direction of the player.
+            */
             if (getCollisionOn() == false) {
                 switch(getDirection()) {
                 case "N": this.setWorldY(this.getWorldY() - this.getSpeed()); break;
@@ -89,25 +114,37 @@ public class Player extends Entity {
         }
     
     }
-    
+
+    /**
+    * This method determines the behaviour of the player depending on the object the player
+    * has collided with. 
+    * @param i the index of the object with the player collided
+    */
     public void pickUpObject(int i) {
 
+        // Arbitrary number beyond length of object list
         if(i != 999) {
 
             String objectName = sc.getObj()[i].getName();
             
             switch(objectName) {
             case "Dot":
+
+                /**
+                * Updates the player's score and removes object 'Dot' on collision with player
+                */
                 score++;
                 sc.getObj()[i] = null;
                 int tileNum, screenTileX, screenTileY = 0;
 
+                /**
+                * Randomly places new 'Dot' on tile whose collision is false
+                */
                 do {
                     screenTileX = rand.nextInt(50);
                     screenTileY = rand.nextInt(50);
                     tileNum = sc.getTileManager().getMapTileNum()[screenTileX][screenTileY];
                 } while (sc.getTileManager().getTiles()[tileNum].getCollision() != false);
-                
                 System.out.printf("A new dot appeared at %d, %d!\n", screenTileY, screenTileX);
                 sc.getObj()[i] = new Dot(screenTileY * sc.getTileSize(), screenTileX * sc.getTileSize());
 
@@ -116,20 +153,40 @@ public class Player extends Entity {
         }
     }
 
+    /**
+    * Draws the player on the screen
+    *
+    * @param g2d the graphics object for drawing the player
+    */
     public void draw(Graphics2D g2d) {
         g2d.setColor(Color.RED);
         Rectangle2D.Double r1 = new Rectangle2D.Double(screenX, screenY, 32 + getSpeed(), 32 + getSpeed());
         g2d.fill(r1);
     }
 
+    /**
+    * Return's the player's screen X-coordinate
+    *
+    * @return X-coordinate of player's position on screen
+    */
     public int getScreenX() {
         return screenX;
     }
 
+    /**
+    * Return's the player's screen Y-coordinate
+    *
+    * @return Y-coordinate of player's position on screen
+    */
     public int getScreenY() {
         return screenY;
     }
 
+    /**
+    * Return's the player's current score
+    *
+    * @return the player's score`
+    */
     public int getScore() {
         return score;
     }
