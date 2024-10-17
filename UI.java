@@ -2,6 +2,10 @@ import java.awt.*;
 import java.awt.geom.*;
 
 /**
+* Michael Deekimcheng and Miguel Yapan
+* 205641 and 205501
+* Date created: October 14, 2024
+*
 * The class is responsible for printing the current player's score and 
 * the tile's column and row which the player would be on.
 */
@@ -33,7 +37,9 @@ public class UI {
 
         g2d.setFont(defaultFont);
 
-        // draw a visual representation of dot so the player knows what object is being kept track of
+        /* 
+        * draw a visual representation of dot so the player knows what object is being kept track of
+        */
         Ellipse2D.Double d1 = new Ellipse2D.Double(24, 24, 36, 36);
         g2d.setColor(Color.ORANGE);
         g2d.fill(d1);
