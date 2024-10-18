@@ -25,7 +25,7 @@ public class Circle extends DrawingObject {
      * 
      * @param x the x-coordinate of the location where the circle will be drawn 
      * @param y the y-coordinate of the location where the circle will be drawn
-     * @param size the size of the circle
+     * @param size the diameter of the circle
      * @param color the color of the circle
      * @param collision a boolean parameter which determines whether the player could collide with an object (true) or not (false)
      */
