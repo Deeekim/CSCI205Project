@@ -1,10 +1,28 @@
 import java.awt.*;
 
+/**
+ * WaterTile
+ * 
+ * Created by:
+ * Name: Michael Deekimcheng, Miguel Yapan
+ * ID: 205641, 205501
+ * Date: September 29, 2024
+ * 
+ * Description: The WaterTile is a composite shape DrawingObject subclass that is used to render parts of the map that are made of water.
+ * 
+ * @author Michael Deekimcheng, Miguel Yapan
+ */
 public class WaterTile extends DrawingObject{
 
+    /**
+     * The waterColor and particleColor variables are used as parameters to create the shape.
+     */
     private Color waterColor = new Color(28, 163, 236);
     private Color particleColor = new Color(203, 241, 247);
 
+    /**
+     * Square and Circle classes are created to form a water shape that will be added to the list of tiles in the createTile method.
+     */
     private Square background = new Square(0, 0, 48, waterColor, true);
     private Circle particle1 = new Circle(3, 4, 3, particleColor, false);
     private Circle particle2 = new Circle(38, 23, 3, particleColor, false);
@@ -19,11 +37,20 @@ public class WaterTile extends DrawingObject{
     private Circle particle11 = new Circle(39, 8, 3, particleColor, false);
     private Circle particle12 = new Circle(6, 32, 3, particleColor, false);
 
+    /**
+     * Creates a WaterTile object using the createTile method described below.
+     * Since the WaterTile object represents the parts of the map that are made of water, the Player object should collide with this class.
+     * Thus, the collision parameter from the DrawingObject class is set to true.
+     */
     public WaterTile(){
         super(true);
         createTile();
     }
 
+    /**
+     * Creates a tile by adding the shape and color of the instantiated Square and Circle objects to the array of tiles.
+     * The shapes and colors are added using the addTile method from the DrawingObject class.
+     */
     public void createTile(){  
         addTile(background.getShape(), background.getColor());
         addTile(particle1.getShape(), particle1.getColor());
