@@ -1,20 +1,47 @@
 import java.awt.*;
 import java.awt.geom.*;
 
+/**
+ * WallTile
+ * 
+ * Created by:
+ * Name: Michael Deekimcheng, Miguel Yapan
+ * ID: 205641, 205501
+ * Date: September 29, 2024
+ * 
+ * Description: The WallTile is a composite shape DrawingObject subclass that is used to render walls in the map.
+ * 
+ * @author Michael Deekimcheng, Miguel Yapan
+ */
 public class WallTile extends DrawingObject{
 
+    /**
+     * The Color variables are used as parameters to create the shape.
+     */
     private Color baseColor = new Color(125, 84, 71);
     private Color topBrickColor = new Color(251, 186, 115);
     private Color midBrickColor = new Color(242, 157, 67);
     private Color bottomBrickColor = new Color(213, 117, 36);
 
+    /**
+     * Square class created to form the background of the wall.
+     */
     private Square background = new Square(0, 0, 48, baseColor, true);
 
+    /**
+     * Creates a WallTile object using the createTile method described below.
+     * Since the WallTile object represents walls in the map, the Player object should collide with this class.
+     * Thus, the collision parameter from the DrawingObject class is set to false.
+     */
     public WallTile(){
         super(true);
         createTile();
     }
 
+    /**
+     * Creates a tile by adding the shape and color of the background object to the array of tiles followed by new Rectangle2D shapes.
+     * The shapes and colors are added using the addTile method from the DrawingObject class.
+     */
     public void createTile(){  
         addTile(background.getShape(), background.getColor());      
         addTile(new Rectangle2D.Double(0, 4, 13, 6), topBrickColor);
