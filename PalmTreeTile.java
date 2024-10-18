@@ -1,8 +1,23 @@
 import java.awt.*;
 import java.awt.geom.*;
 
+/**
+ * PalmTreeTile
+ * 
+ * Created by:
+ * Name: Michael Deekimcheng, Miguel Yapan
+ * ID: 205641, 205501
+ * Date: September 29, 2024
+ * 
+ * Description: The PalmTreeTile is a composite shape DrawingObject subclass that is used to render the trees in the map.
+ * 
+ * @author Michael Deekimcheng, Miguel Yapan
+ */
 public class PalmTreeTile extends DrawingObject {
 
+    /**
+     * The Color variables are used as parameters to create the shape.
+     */
     private Color sandColor = new Color(253, 211, 137);
     private Color palmLeafColor1 = new Color(134, 204, 96);
     private Color palmLeafColor2 = new Color(124,214,76);
@@ -10,21 +25,33 @@ public class PalmTreeTile extends DrawingObject {
     private Color trunkColor = new Color(147, 119, 71);
     private Color coconutColor = new Color(113,75,57);
 
+    /**
+     * Square and Circle classes are created to form parts of the tree that will be added to the list of tiles in the createTile method.
+     */
     private Square background = new Square(0, 0, 48, sandColor, true);
     private Circle particle1 = new Circle(3,4,3, palmLeafColor3, true);
     private Circle particle2 = new Circle(41, 23, 3, palmLeafColor3, true);
     private Circle particle3 = new Circle(35, 25, 5, palmLeafColor3, true);
     private Circle particle4 = new Circle(29, 13, 5, palmLeafColor3, true);
     private Circle particle5 = new Circle(37, 28, 7, palmLeafColor3, true);
-
     private Circle coconut1 = new Circle(22, 8, 8, coconutColor, true);
     private Circle coconut2 = new Circle(18, 12, 8, coconutColor, true);
 
+    /**
+     * Creates a PalmTreeTile object using the createTile method described below.
+     * Since the PalmTreeTile object represents trees, the Player object should not be able to collide with this class.
+     * Thus, the collision parameter from the DrawingObject class is set to true.
+     */
     public PalmTreeTile() {
         super(true); // Assuming collision is true for palm tree
         createTile();
     }
 
+    /**
+     * Creates a tile by adding the shape and color of the instantiated Square and Circle objects to the array of tiles.
+     * Additional shapes (for the leaves and trunk) are also drawn using the Path2D object.
+     * The shapes and colors are added using the addTile method from the DrawingObject class.
+     */
     private void createTile() {
 
         addTile(background.getShape(), background.getColor());
