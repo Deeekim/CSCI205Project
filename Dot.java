@@ -24,10 +24,4 @@ public class Dot extends DrawingObject {
         addShape(new Ellipse2D.Double(15, 15, 18, 18), Color.YELLOW);
         addShape(new Ellipse2D.Double(24, 18, 6, 6), Color.WHITE);
     }
-
-    // Add shape and corresponding color
-    public void addShape(Shape shape, Color color) {
-        getShapes().add(shape);
-        getColors().add(color);
-    }
 }
