@@ -1,7 +1,7 @@
 import java.awt.event.*;
 
 /**
- * AssetSetter
+ * KeyHandle
  * 
  * Description: The class implements the KeyListener interface to handle
  * keyboard inputs for movement controls in the game. It detects whether combinations
@@ -10,7 +10,6 @@ import java.awt.event.*;
  * ID Number: 205641, 205501
  * Date: September 29, 2024
  */
-
 public class KeyHandle implements KeyListener {
     
     private boolean upPressed, downPressed, leftPressed, rightPressed;
