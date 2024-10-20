@@ -1,5 +1,13 @@
 import java.awt.*;
 
+/**
+ * Entity
+ *
+ * Description: The class is used to store information about objects that move in the map.
+ * Authors: Michael Deekimcheng, Miguel Yapan
+ * ID Numbers: 205641, 205501
+ * Date: September 29, 2024
+ */
 public class Entity {
     
     private int worldX, worldY;
@@ -9,9 +17,27 @@ public class Entity {
     private Rectangle solidArea;
     private int solidAreaDefaultX, solidAreaDefaultY;
 
+    /** The constructor is empty as the class is used just to store information about the entity subclasses. */
     public Entity() {
     }
 
+    /**
+     * The following methods are getter and setter methods for the following variables:
+     * worldX
+     * worldY
+     * speed
+     * direction
+     * collisionOn
+     * solidArea
+     * solidArea.x
+     * solidArea.y
+     * solidArea.width
+     * solidArea.height
+     * solidAreaDefaultX
+     * solidAreaDefaultY
+     * 
+     */
+    
     public int getWorldX() {
         return worldX;
     }
