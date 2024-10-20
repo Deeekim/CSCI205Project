@@ -3,26 +3,16 @@ import java.awt.*;
 /**
  * WaterTile
  * 
- * Created by:
- * Name: Michael Deekimcheng, Miguel Yapan
- * ID: 205641, 205501
- * Date: September 29, 2024
- * 
  * Description: The WaterTile is a composite shape DrawingObject subclass that is used to render parts of the map that are made of water.
- * 
- * @author Michael Deekimcheng, Miguel Yapan
+ * Authors: Michael Deekimcheng, Miguel Yapan
+ * ID Number: 205641, 205501
+ * Date: September 29, 2024
  */
 public class WaterTile extends DrawingObject{
 
-    /**
-     * The waterColor and particleColor variables are used as parameters to create the shape.
-     */
     private Color waterColor = new Color(28, 163, 236);
     private Color particleColor = new Color(203, 241, 247);
 
-    /**
-     * Square and Circle classes are created to form a water shape that will be added to the list of tiles in the createTile method.
-     */
     private Square background = new Square(0, 0, 48, waterColor, true);
     private Circle particle1 = new Circle(3, 4, 3, particleColor, false);
     private Circle particle2 = new Circle(38, 23, 3, particleColor, false);
