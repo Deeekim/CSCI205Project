@@ -6,24 +6,19 @@ import java.io.InputStreamReader;
 /**
 * TileManager
 *
-* Created By:
-* Name: Michael Deekimcheng, Miguel Yapan
-* ID: 205641, 205501
-* Date: October 6, 2024
-*
 * Description: This class is responsible for storing information on the game's world map,
 * including which tile is assigned to which x and y coordinates. The class also ensures that 
 * tiles are loaded correctly, specifically tiles that fit within the frame size. This helps reduce
 * issues in rendering too much game elements at once.
-*
-* @author Michael Deekimcheng, Miguel Yapan
-* @version 1.2
+* Authors: Michael Deekimcheng, Miguel Yapan
+* ID Number: 205641, 205501
+* Date: October 6, 2024
 */
 public class TileManager {
 
     private SceneCanvas sc;
-    private DrawingObject[] tiles; // Array of tile objects
-    private int[][] mapTileNum; // Store which tile to use at each position
+    private DrawingObject[] tiles; 
+    private int[][] mapTileNum; 
 
     /**
     * Constructs a TileManager for the given SceneCavas
