@@ -3,14 +3,10 @@ import java.awt.*;
 /**
  * SandTile
  * 
- * Created by:
- * Name: Michael Deekimcheng, Miguel Yapan
- * ID: 205641, 205501
- * Date: September 29, 2024
- * 
  * Description: The SandTile is a composite shape DrawingObject subclass that is used to render the parts of the map made of sand.
- * 
- * @author Michael Deekimcheng, Miguel Yapan
+ * Authors: Michael Deekimcheng, Miguel Yapan
+ * ID Number: 205641, 205501
+ * Date: September 29, 2024
  */
 public class SandTile extends DrawingObject{
 
