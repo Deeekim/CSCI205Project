@@ -1,14 +1,16 @@
 import java.awt.event.*;
 
 /**
-* Michael Deekimcheng and Miguel Yapan
-* 205641 and 205501
-* Date created: October 05, 2024
-* 
-* The KeyHandle class implements the KeyListener interface to handle
-* keyboard inputs for movement controls in the game. It detects whether combinations
-* of specific keys (W, A, S, D) are pressed to control movement.
-*/ 
+ * AssetSetter
+ * 
+ * Description: The class implements the KeyListener interface to handle
+ * keyboard inputs for movement controls in the game. It detects whether combinations
+ * of specific keys (W, A, S, D) are pressed to control movement.
+ * Authors: Michael Deekimcheng, Miguel Yapan
+ * ID Number: 205641, 205501
+ * Date: September 29, 2024
+ */
+
 public class KeyHandle implements KeyListener {
     
     private boolean upPressed, downPressed, leftPressed, rightPressed;
