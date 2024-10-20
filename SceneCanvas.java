@@ -3,24 +3,22 @@ import javax.swing.*;
 
 public class SceneCanvas extends JComponent implements Runnable {
 
-    // PIXEL SETTINGS
+    // Pixel Settings
     private final int originalTileSize = 16;
     private final int scale = 3;
 
-    // SCREEN SETTINGS
+    // Screen Settings
     private final int tileSize = originalTileSize * scale;
     private final int maxScreenCol = 18;
     private final int maxScreenRow = 14;
     private final int screenWidth = tileSize * maxScreenCol;
     private final int screenHeight = tileSize * maxScreenRow;
 
-    // WORLD SETTINGS
+    // World Settings
     private final int maxWorldCol = 50;
     private final int maxWorldRow = 50;
-    // private final int worldWidth = tileSize * maxWorldCol;
-    // private final int worldHeight = tileSize * maxWorldRow;
 
-    // FPS SETTINGS
+    // FPS Settings
     private int FPS = 60;
 
     private TileManager tileManager = new TileManager(this);
@@ -46,6 +44,7 @@ public class SceneCanvas extends JComponent implements Runnable {
         //trees[2] = new Tree(this, 300, 100);  // Third tree
     }
 
+    
     public void setUpGame() {
         aSetter.setObject();
     }
