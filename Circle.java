@@ -1,20 +1,15 @@
-import java.awt.*;
-import java.awt.geom.*;
-
 /**
  * Circle
  * 
- * Created by: 
- * Name: Michael Deekimcheng, Miguel Yapan
- * ID: 205641, 205501
- * Date: September 29, 2024
- *
  * Description: The Circle class creates a circle object given the user's input parameters.
  * This class is used to create shapes to add design to the tiles.
- * 
- * @author Michael Deekimcheng, Miguel Yapan
- * @version 1.0
+ * Authors: Michael Deekimcheng, Miguel Yapan
+ * ID Number: 205641, 205501
+ * Date: September 29, 2024
  */
+import java.awt.*;
+import java.awt.geom.*;
+
 public class Circle extends DrawingObject {
     
     private Color color;
