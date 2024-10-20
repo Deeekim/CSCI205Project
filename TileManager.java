@@ -34,7 +34,7 @@ public class TileManager {
 
         // Create a 2D array of integers for tiles to reference
         mapTileNum = new int[sc.getMaxWorldCol()][sc.getMaxWorldRow()];
-        loadMap('map1.txt');
+        loadMap("map1.txt");
     }
 
     /**
