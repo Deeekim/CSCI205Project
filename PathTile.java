@@ -3,26 +3,16 @@ import java.awt.*;
 /**
  * PathTile
  * 
- * Created by:
- * Name: Michael Deekimcheng, Miguel Yapan
- * ID: 205641, 205501
- * Date: September 29, 2024
- * 
  * Description: The PathTile is a composite shape DrawingObject subclass that is used to render the paths on the map.
- * 
- * @author Michael Deekimcheng, Miguel Yapan
+ * Authors: Michael Deekimcheng, Miguel Yapan
+ * ID Number: 205641, 205501
+ * Date: September 29, 2024
  */
 public class PathTile extends DrawingObject {
 
-    /**
-     * The dirtColor and particleColor variables are used as parameters to create the shape.
-     */
     private Color dirtColor = new Color(155, 118, 83);
     private Color particleColor = new Color(125, 98, 63);
 
-    /**
-     * Square and Circle classes are created to form a path shape that will be added to the list of tiles in the createTile method.
-     */
     private Square dirt = new Square(0, 0, 48, dirtColor, false);
     private Circle particle1 = new Circle(6, 5, 3, particleColor, false);
     private Circle particle2 = new Circle(24, 15, 3, particleColor, false);
