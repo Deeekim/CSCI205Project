@@ -4,11 +4,11 @@ import java.awt.geom.*;
 /**
  * Square
  * 
- * The Square class creates a square object given the user's input parameters.
+ * Description: The Square class creates a square object given the user's input parameters.
  * This class is used to create shapes to add design to the tiles.
- * 
- * @author Michael Deekimcheng
- * @version 1.0
+ * Authors: Michael Deekimcheng, Miguel Yapan
+ * ID Number: 205641, 205501
+ * Date: September 29, 2024
  */
 public class Square extends DrawingObject{
     
