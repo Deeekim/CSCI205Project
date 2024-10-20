@@ -2,8 +2,13 @@ import java.awt.*;
 import java.util.ArrayList;
 
 /**
- * The DrawingObject class is an abstract class that will be used as the superclass for static visual elements in the program.  
+ * DrawingObject
+ * 
+ * Description: An abstract class that will be used as the superclass for static visual elements in the program.  
  * In general, there are two main subclasses - tile subclasses that span the whole map and general visuals that could be placed anywhere.
+ * Authors: Michael Deekimcheng, Miguel Yapan
+ * ID Number: 205641, 205501
+ * Date: September 29, 2024
  */
 public abstract class DrawingObject {
     
