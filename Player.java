@@ -3,13 +3,14 @@ import java.awt.geom.*;
 import java.util.Random;
 
 /**
-* Michael Deekimcheng and Miguel Yapan
-* 205641 and 205501
-* Date Created: October 11, 2024
+* Player
 *
+* Description: The class is an extension of the Entity class, which has the capacity
+* to take key inputs. The user will be controlling the movement of this class across the world map.
 * This code creates a Player class that extends the Entity class with the capacity to
-* take key inputs. The user will be controlling the movement of the player across the
-* world map. 
+* Authors: Michael Deekimcheng and Miguel Yapan
+* ID Number: 205641, 205501
+* Date: October 11, 2024
 */
 public class Player extends Entity {
 
@@ -124,6 +125,7 @@ public class Player extends Entity {
     /**
     * This method determines the behaviour of the player depending on the object the player
     * has collided with. 
+    *
     * @param i the index of the object with the player collided
     */
     public void pickUpObject(int i) {
