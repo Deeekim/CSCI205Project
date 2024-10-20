@@ -1,3 +1,6 @@
+import java.awt.*;
+import java.awt.geom.*;
+
 /**
  * Circle
  * 
@@ -7,9 +10,6 @@
  * ID Number: 205641, 205501
  * Date: September 29, 2024
  */
-import java.awt.*;
-import java.awt.geom.*;
-
 public class Circle extends DrawingObject {
     
     private Color color;
@@ -25,7 +25,6 @@ public class Circle extends DrawingObject {
      * @param collision a boolean parameter which determines whether the player could collide with an object (true) or not (false)
      */
     public Circle(double x, double y, double size, Color color, boolean collision) {
-
         super(collision);
         this.color = color;
         this.circle = new Ellipse2D.Double(x, y, size, size);
