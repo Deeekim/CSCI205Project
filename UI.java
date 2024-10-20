@@ -2,12 +2,13 @@ import java.awt.*;
 import java.awt.geom.*;
 
 /**
-* Michael Deekimcheng and Miguel Yapan
-* 205641 and 205501
-* Date created: October 14, 2024
+* UI
 *
-* The class is responsible for printing the current player's score and 
+* Description: The class is responsible for printing the current player's score and 
 * the tile's column and row which the player would be on.
+* Authors: Michael Deekimcheng and Miguel Yapan
+* ID Number: 205641 and 205501
+* Date created: October 14, 2024
 */
 public class UI {
     
