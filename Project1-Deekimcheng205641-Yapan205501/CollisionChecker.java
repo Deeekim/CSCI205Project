@@ -5,7 +5,7 @@
  * Description: A class that checks if the entity is colliding with any object
  * Authors: Michael Deekimcheng, Miguel Yapan
  * ID Number: 205641, 205501
- * Date: September 29, 2024
+ * Date: October 2, 2024
  */
 public class CollisionChecker {
 

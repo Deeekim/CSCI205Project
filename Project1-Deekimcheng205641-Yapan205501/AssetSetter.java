@@ -5,7 +5,7 @@
  * In this project, it places `Dot` objects on the game scene at specified tiles.
  * Authors: Michael Deekimcheng, Miguel Yapan
  * ID Number: 205641, 205501
- * Date: September 29, 2024
+ * Date: October 15, 2024
  */
 public class AssetSetter {
     

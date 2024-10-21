@@ -8,7 +8,7 @@ import java.awt.*;
  * additional dots will be generated randomly in the map.
  * Authors: Michael Deekimcheng, Miguel Yapan
  * ID Number: 205641, 205501
- * Date: September 29, 2024
+ * Date: October 15, 2024
  */
 public class Dot extends DrawingObject {
 

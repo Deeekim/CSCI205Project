@@ -7,7 +7,7 @@ import java.awt.geom.*;
  * Description: The HutTile is a composite shape DrawingObject subclass that is used to render the huts in the map.
  * Authors: Michael Deekimcheng, Miguel Yapan
  * ID Number: 205641, 205501
- * Date: September 29, 2024
+ * Date: October 6, 2024
  */
 public class HutTile extends DrawingObject {
 

@@ -10,7 +10,7 @@ import java.util.Random;
 * This code creates a Player class that extends the Entity class with the capacity to
 * Authors: Michael Deekimcheng and Miguel Yapan
 * ID Number: 205641, 205501
-* Date: October 11, 2024
+* Date: October 2, 2024
 */
 public class Player extends Entity {
 
@@ -66,7 +66,7 @@ public class Player extends Entity {
         if(keyH.getUpPressed() == true || keyH.getDownPressed() == true || 
         keyH.getLeftPressed() == true || keyH.getRightPressed() == true) {
             
-            /*
+            /**
             * Set direction of the play depending on the keys pressed
             */ 
             if (keyH.getUpPressed()) {
@@ -101,7 +101,7 @@ public class Player extends Entity {
             int objIndex = sc.getCChecker().checkObject(this, true);
             pickUpObject(objIndex);
 
-            /*
+            /**
             * Runs the player is not colliding with any object or tile. Updates
             * worldX and worldY depending on the direction of the player.
             */

@@ -7,7 +7,7 @@ import java.awt.geom.*;
  * Description: The PalmTreeTile is a composite shape DrawingObject subclass that is used to render the trees in the map.
  * Authors: Michael Deekimcheng, Miguel Yapan
  * ID Number: 205641, 205501
- * Date: September 29, 2024
+ * Date: October 6, 2024
  */
 public class PalmTreeTile extends DrawingObject {
 

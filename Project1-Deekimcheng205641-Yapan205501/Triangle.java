@@ -9,7 +9,7 @@ import java.awt.geom.*;
  * This class is used to create shapes to add design to the tiles.
  * Authors: Michael Deekimcheng, Miguel Yapan
  * ID Number: 205641, 205501
- * Date: September 29, 2024
+ * Date: October 6, 2024
  */
 
 public class Triangle extends DrawingObject {

@@ -38,7 +38,7 @@ public class UI {
 
         g2d.setFont(defaultFont);
 
-        /* 
+        /**
         * draw a visual representation of dot so the player knows what object is being kept track of
         */
         Ellipse2D.Double d1 = new Ellipse2D.Double(24, 24, 36, 36);

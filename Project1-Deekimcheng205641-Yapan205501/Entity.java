@@ -6,7 +6,7 @@ import java.awt.*;
  * Description: The class is used to store information about objects that move in the map.
  * Authors: Michael Deekimcheng, Miguel Yapan
  * ID Numbers: 205641, 205501
- * Date: September 29, 2024
+ * Date: October 2, 2024
  */
 public class Entity {
     

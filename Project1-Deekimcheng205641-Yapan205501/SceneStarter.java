@@ -6,7 +6,6 @@
 * ID Number: 205641, 205501
 * Date: September 29, 2024
 */
-
 public class SceneStarter {
 
     public static void main(String[] args) {

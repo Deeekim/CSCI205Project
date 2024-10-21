@@ -7,7 +7,7 @@ import java.awt.geom.*;
  * Description: The WallTile is a composite shape DrawingObject subclass that is used to render walls in the map.
  * Name: Michael Deekimcheng, Miguel Yapan
  * ID: 205641, 205501
- * Date: September 29, 2024
+ * Date: October 6, 2024
  */
 public class WallTile extends DrawingObject{
 
