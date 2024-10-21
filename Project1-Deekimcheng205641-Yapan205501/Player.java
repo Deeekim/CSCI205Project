@@ -66,9 +66,7 @@ public class Player extends Entity {
         if(keyH.getUpPressed() == true || keyH.getDownPressed() == true || 
         keyH.getLeftPressed() == true || keyH.getRightPressed() == true) {
             
-            /**
-            * Set direction of the play depending on the keys pressed
-            */ 
+            // Set direction of the play depending on the keys pressed
             if (keyH.getUpPressed()) {
                 if (keyH.getRightPressed()) {
                     this.setDirection("NE");
@@ -101,10 +99,7 @@ public class Player extends Entity {
             int objIndex = sc.getCChecker().checkObject(this, true);
             pickUpObject(objIndex);
 
-            /**
-            * Runs the player is not colliding with any object or tile. Updates
-            * worldX and worldY depending on the direction of the player.
-            */
+            // Updates worldX and worldY depending on the direction of the player if player is not colliding with any object or tile.
             if (getCollisionOn() == false) {
                 switch(getDirection()) {
                 case "N": this.setWorldY(this.getWorldY() - this.getSpeed()); break;
@@ -138,17 +133,14 @@ public class Player extends Entity {
             switch(objectName) {
             case "Dot":
 
-                /*
-                * Updates the player's score and removes object 'Dot' on collision with player
-                */
+                
+                // Updates the player's score and removes object 'Dot' on collision with player
                 score++;
                 sc.getObj()[i] = null;
                 int tileNum, screenTileX, screenTileY = 0;
 
-                /*
-                * Randomly places new 'Dot' on tile whose collision is false. The terminal prints out
-                * the tile row and tile size where the new 'Dot' is created.
-                */
+
+                // Randomly places new 'Dot' on tile whose collision is false.
                 do {
                     screenTileX = rand.nextInt(50);
                     screenTileY = rand.nextInt(50);

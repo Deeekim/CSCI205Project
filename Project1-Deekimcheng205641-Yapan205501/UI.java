@@ -38,9 +38,8 @@ public class UI {
 
         g2d.setFont(defaultFont);
 
-        /**
-        * draw a visual representation of dot so the player knows what object is being kept track of
-        */
+
+        // draw a dot for counting score
         Ellipse2D.Double d1 = new Ellipse2D.Double(24, 24, 36, 36);
         g2d.setColor(Color.ORANGE);
         g2d.fill(d1);
